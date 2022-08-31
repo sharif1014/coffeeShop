@@ -1,10 +1,144 @@
 .container {
-  height: 5rem;
+  height: 10rem;
   width: 100%;
-  background-color: black;
-  color: #ffffff;
+  background: #002222;
+  box-shadow: 1px 7px 10px -1px rgba(0, 0, 0, 0.78);
+  padding: 0 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 2.2rem;
+  position: sticky;
+  top: 0;
+}
+.left,
+.right {
+  flex: 1;
+}
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+.center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+.ordernow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.orderIcon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #a5f0fa;
+  font-size: 1.6rem;
+  color: #2b024d;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.orderTexts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+.orderText {
+  font-size: 1.6rem;
+  color: #f77d03;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.orderPhone {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 400;
+}
+/*MENU DESIGN*/
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menuItem {
+  color: #a7a7a7;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.logo {
+  font-size: 2rem;
+  font-family: "Pacifico", cursive;
+  color: #fbff04;
+  font-style: italic;
+  letter-spacing: 0.12rem;
+}
+.menuItem:hover {
+  color: #fbff04;
+}
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+.cartItem {
+  font-size: 2.5rem;
+  position: relative;
+}
+.badge {
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #f77d03;
+  color: #ffffff;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+}
+.userItem {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+.userItem :hover { 
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/* RESPONSIVE DESIGN START HERE */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .orderTexts {
+    margin-left: 0.5rem;
+  }
+  .orderText {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .orderPhone {
+    font-size: 1.6rem;
+  }
 }
