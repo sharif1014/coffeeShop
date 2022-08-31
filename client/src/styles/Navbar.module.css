@@ -118,13 +118,6 @@
   font-size: 3rem;
   margin-right: 1rem;
 }
-.userItem :hover { 
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-}
 
 /* RESPONSIVE DESIGN START HERE */
 @media screen and (max-width: 768px) {
