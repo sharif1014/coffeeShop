@@ -1,9 +1,11 @@
-//import { useState } from "react";
+import { useState } from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaCartPlus, FaPhoneAlt } from "react-icons/fa";
 import { FcBusinessman } from "react-icons/fc";
 import styles from "../../styles/Navbar.module.css";
+
 const Navbar = () => {
-  // const [scroll, setScroll] = useState(0);
+  const [open, setOpen] = useState(false);
 
   // const backgroundChange = () => {
   //   setScroll(scroll + window.scrollY);
@@ -24,7 +26,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className={styles.center}>
-        <ul className={styles.menu}>
+        <ul className={!open ? styles.menu : (styles.menu, styles.mobileMenu)}>
           <li className={styles.menuItem}>
             <a href="#home" className={styles.menuLink}>
               Homepage
@@ -74,6 +76,24 @@ const Navbar = () => {
               <FaCartPlus />
               <span className={styles.badge}>2</span>
             </a>
+          </li>
+          <li className={styles.hambergerItem}>
+            <div
+              className={styles.mobileMenuIcons}
+              onClick={() => {
+                setOpen(!open);
+              }}
+            >
+              {!open ? (
+                <span className={styles.openIcon}>
+                  <AiOutlineMenu />
+                </span>
+              ) : (
+                <span className={styles.closeIcon}>
+                  <AiOutlineClose />
+                </span>
+              )}
+            </div>
           </li>
         </ul>
       </div>

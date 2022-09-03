@@ -19,7 +19,7 @@
   justify-content: flex-end;
 }
 .center {
-  flex: 2;
+  flex: 3;
   display: flex;
   justify-content: center;
 }
@@ -65,21 +65,39 @@
 /*MENU DESIGN*/
 .menu {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  color: #bdbdbd;
+  gap: 2rem;
 }
 .menuItem {
-  color: #a7a7a7;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
 }
+/* .center {
+  position: relative;
+} */
+.mobileMenu {
+  width: 100%;
+  padding: 2rem;
+  background-color: #2b024d;
+  color: #f77d03;
+  font-size: 2rem;
+  font-weight: 500;
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+.mobileMenu .menuItem:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .logo {
   font-size: 2rem;
   font-family: "Pacifico", cursive;
@@ -97,7 +115,7 @@
   color: #ffffff;
 }
 .cartItem {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   position: relative;
 }
 .badge {
@@ -118,11 +136,29 @@
   font-size: 3rem;
   margin-right: 1rem;
 }
+.mobileMenuIcons {
+  margin-left: 2rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  display: none;
+}
+.closeIcon {
+  color: #f77d03;
+}
+.openIcon {
+  color: #fbff04;
+}
 
 /* RESPONSIVE DESIGN START HERE */
 @media screen and (max-width: 768px) {
   .container {
     padding: 0 1rem;
+  }
+  .center {
+    flex: 1;
+  }
+  .logo {
+    display: none;
   }
   .orderTexts {
     margin-left: 0.5rem;
@@ -133,5 +169,14 @@
   }
   .orderPhone {
     font-size: 1.6rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .mobileMenuIcons {
+    display: block;
+    cursor: pointer;
   }
 }
