@@ -1,17 +1,13 @@
 
-import Layout from './components/layout/Layout';
 import Home from './pages/home/Home';
+import Layout from './components/layout/Layout';
 
 function App() {
   return (
     <div>
-      <Layout>
-      <Home/>
-      <Home/>
-      <Home/>
-      <Home/>
-      <Home/>
-    </Layout>
+    <Layout>
+        <Home />
+      </Layout>
     </div>
   );
 }

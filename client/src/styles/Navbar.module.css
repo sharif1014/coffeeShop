@@ -9,6 +9,7 @@
   justify-content: space-between;
   position: sticky;
   top: 0;
+  z-index: 3;
 }
 .left,
 .right {
@@ -79,21 +80,7 @@
 /* .center {
   position: relative;
 } */
-.mobileMenu {
-  width: 100%;
-  padding: 2rem;
-  background-color: #2b024d;
-  color: #f77d03;
-  font-size: 2rem;
-  font-weight: 500;
-  position: absolute;
-  top: 10rem;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 2rem;
-}
+
 .mobileMenu .menuItem:not(:last-child) {
   margin-bottom: 2rem;
 }
@@ -174,7 +161,21 @@
   .menu {
     display: none;
   }
-
+  .mobileMenu {
+    width: 100%;
+    padding: 2rem;
+    background-color: #2b024d;
+    color: #f77d03;
+    font-size: 2rem;
+    font-weight: 500;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
   .mobileMenuIcons {
     display: block;
     cursor: pointer;
